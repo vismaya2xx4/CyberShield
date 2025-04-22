@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Security Awareness</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-gray-100 font-roboto">
+    <!-- Glowing Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+        <div class="absolute bottom-1/3 right-1/3 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl opacity-5"></div>
+    </div>
+
+    <!-- Cyber Navbar -->
+    <nav class="bg-gray-900/80 backdrop-blur-md border-b border-gray-800 py-4 px-6 shadow-lg z-50 relative">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-cyan-400 flex items-center font-orbitron tracking-tight">
+                <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">CYBER<span class="text-cyan-300">SHIELD</span></span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:tracking-wider font-medium group">
+                    <span class="group-hover:text-cyan-400">HOME</span>
+                    <span class="block h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+                <a href="threats.html" class="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:tracking-wider font-medium group">
+                    <span class="group-hover:text-cyan-400">THREATS</span>
+                    <span class="block h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+                <a href="quiz.html" class="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:tracking-wider font-medium group">
+                    <span class="group-hover:text-cyan-400">QUIZ</span>
+                    <span class="block h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+                <a href="password-check.html" class="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:tracking-wider font-medium group">
+                    <span class="group-hover:text-cyan-400">PASSWORD CHECK</span>
+                    <span class="block h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+                <a href="report.html" class="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:tracking-wider font-medium group">
+                    <span class="group-hover:text-cyan-400">REPORT</span>
+                    <span class="block h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden py-4 bg-gray-900/95 backdrop-blur-sm" id="mobile-menu">
+            <a href="#" class="block py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition font-medium">HOME</a>
+            <a href="threats.html" class="block py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition font-medium">THREATS</a>
+            <a href="quiz.html" class="block py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition font-medium">QUIZ</a>
+            <a href="password-check.html" class="block py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition font-medium">PASSWORD CHECK</a>
+            <a href="report.html" class="block py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition font-medium">REPORT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('images/grid-pattern.svg')] opacity-5"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-orbitron bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 leading-tight">
+                SECURE YOUR <br><span class="text-white">CyberShield</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                Identify and protect against modern cyber threats with our interactive security platform.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="quiz.html" class="relative group bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1">
+                    <span class="relative z-10">TEST YOUR KNOWLEDGE</span>
+                    <span class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0"></span>
+                </a>
+                <a href="threats.html" class="relative group border-2 border-cyan-400 text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/20 transform hover:-translate-y-1">
+                    <span class="relative z-10">EXPLORE THREATS</span>
+                    <span class="absolute inset-0 bg-cyan-400/5 rounded-lg -z-0"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-gray-900/50 to-gray-950/80 backdrop-blur-sm border-t border-b border-gray-800/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 font-orbitron text-cyan-400">
+                <span class="border-b-2 border-cyan-500 pb-2">CYBER THREAT STATISTICS</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900/60 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-105 hover:border-cyan-500/30 hover:shadow-cyan-500/10">
+                    <div class="text-5xl font-bold text-cyan-400 mb-4 font-orbitron">93%</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">OF BREACHES</h3>
+                    <p class="text-gray-400">Caused by human error or social engineering</p>
+                </div>
+                <div class="bg-gray-900/60 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-105 hover:border-cyan-500/30 hover:shadow-cyan-500/10">
+                    <div class="text-5xl font-bold text-cyan-400 mb-4 font-orbitron">$4.45M</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">AVERAGE COST</h3>
+                    <p class="text-gray-400">Of a data breach in 2023</p>
+                </div>
+                <div class="bg-gray-900/60 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-105 hover:border-cyan-500/30 hover:shadow-cyan-500/10">
+                    <div class="text-5xl font-bold text-cyan-400 mb-4 font-orbitron">+300%</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">INCREASE</h3>
+                    <p class="text-gray-400">In cyber attacks since COVID-19</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-6 bg-gray-950">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 font-orbitron text-cyan-400">
+                <span class="border-b-2 border-cyan-500 pb-2">KEY FEATURES</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900/80 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-[1.02] hover:border-cyan-500/30 hover:shadow-cyan-500/10 group">
+                    <div class="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-200 group-hover:text-white">THREAT ENCYCLOPEDIA</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300">Comprehensive information about various cyber threats with real-world examples.</p>
+                    <div class="mt-6">
+                        <a href="threats.html" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                            Learn More
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900/80 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-[1.02] hover:border-cyan-500/30 hover:shadow-cyan-500/10 group">
+                    <div class="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-200 group-hover:text-white">SECURITY QUIZ</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300">Test your knowledge with our interactive cybersecurity awareness quiz.</p>
+                    <div class="mt-6">
+                        <a href="quiz.html" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                            Take Quiz
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900/80 border border-gray-800/50 p-8 rounded-xl shadow-xl transform transition hover:scale-[1.02] hover:border-cyan-500/30 hover:shadow-cyan-500/10 group">
+                    <div class="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-200 group-hover:text-white">PASSWORD CHECKER</h3>
+                    <p class="text-gray-400 group-hover:text-gray-300">Evaluate your password strength and get tips for improvement.</p>
+                    <div class="mt-6">
+                        <a href="password-check.html" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                            Check Now
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm border-t border-b border-cyan-500/20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 font-orbitron text-white">
+                READY TO BOOST YOUR CYBER AWARENESS?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300 leading-relaxed">
+                Join thousands of users who have improved their security posture with CyberShield.
+            </p>
+            <a href="quiz.html" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 px-10 rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-1">
+                GET STARTED NOW
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/80 backdrop-blur-md border-t border-gray-800 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-cyan-400 flex items-center font-orbitron">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">CYBERSHIELD</span>
+                    </a>
+                    <p class="text-gray-400 mt-2">Security Awareness Platform</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.09.682-.217.682-.48 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800/50 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="current-year"></span> CyberShield. All rights reserved. | Created by <span class="text-cyan-400">Vismaya Vinod Nair</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

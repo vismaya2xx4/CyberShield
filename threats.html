@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Encyclopedia | CyberShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar (Same as index.html) -->
+    <nav class="bg-gray-800 py-4 px-6 shadow-lg">
+        <!-- Copy navbar from index.html -->
+    </nav>
+
+    <!-- Threats Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Cyber Threat Encyclopedia</h1>
+                <p class="text-xl text-gray-300">Learn about modern digital threats and how to protect yourself</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" id="threat-search" class="w-full bg-gray-700 text-white p-4 pl-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Search threats...">
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Threat Cards Grid -->
+            <div id="threats-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Threat cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-800 py-8 px-6">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="js/threats.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

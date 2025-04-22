@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Quiz | CyberShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar (Same as index.html) -->
+    <nav class="bg-gray-800 py-4 px-6 shadow-lg">
+        <!-- Copy navbar from index.html -->
+    </nav>
+
+    <!-- Quiz Container -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Cyber Security Quiz</h1>
+                <p class="text-xl text-gray-300">Test your knowledge of common cyber threats and security best practices</p>
+            </div>
+
+            <div id="quiz-container" class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div id="start-screen" class="text-center animate__animated animate__fadeIn">
+                    <h2 class="text-2xl font-bold mb-6">Ready to Test Your Cyber Awareness?</h2>
+                    <p class="text-gray-300 mb-8">This quiz contains 10 questions about various cybersecurity topics. Try to answer as many as you can correctly!</p>
+                    <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        Start Quiz
+                    </button>
+                </div>
+
+                <div id="quiz-screen" class="hidden animate__animated animate__fadeIn">
+                    <div class="flex justify-between items-center mb-6">
+                        <div id="question-counter" class="text-cyan-400 font-bold">Question 1/10</div>
+                        <div id="timer" class="bg-gray-700 px-3 py-1 rounded-full">Time: 60s</div>
+                    </div>
+                    
+                    <div id="question" class="text-xl font-semibold mb-8"></div>
+                    
+                    <div id="options" class="grid grid-cols-1 gap-3 mb-8">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <button id="prev-btn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition opacity-50 cursor-not-allowed" disabled>
+                            Previous
+                        </button>
+                        <button id="next-btn" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded transition">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+                <div id="result-screen" class="hidden text-center animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-6">Quiz Completed!</h2>
+                    <div id="score" class="text-5xl font-bold mb-6 text-cyan-400">8/10</div>
+                    <div id="score-message" class="text-xl mb-8"></div>
+                    <div id="feedback" class="mb-8 text-left bg-gray-700 p-4 rounded-lg"></div>
+                    <button id="restart-btn" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 mr-4">
+                        Try Again
+                    </button>
+                    <a href="threats.html" class="inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition transform hover:scale-105">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-800 py-8 px-6">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

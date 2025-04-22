@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Threat | CyberShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar (Same as index.html) -->
+    <nav class="bg-gray-800 py-4 px-6 shadow-lg">
+        <!-- Copy navbar from index.html -->
+    </nav>
+
+    <!-- Report Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Report a Security Threat</h1>
+                <p class="text-xl text-gray-300">Help us improve cybersecurity by reporting suspicious activities</p>
+            </div>
+
+            <form id="report-form" class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8 animate__animated animate__fadeIn" action="https://formsubmit.co/your-email@example.com" method="POST">
+                <input type="hidden" name="_subject" value="New Threat Report - CyberShield">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="name" class="block text-lg font-medium mb-2">Your Name (Optional)</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-700 text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium mb-2">Your Email (Optional)</label>
+                        <input type="email" id="email" name="email" class="w-full bg-gray-700 text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <label for="threat-type" class="block text-lg font-medium mb-2">Threat Type</label>
+                    <select id="threat-type" name="threat-type" class="w-full bg-gray-700 text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <option value="">Select a threat type...</option>
+                        <option value="phishing">Phishing Attempt</option>
+                        <option value="malware">Malware/Virus</option>
+                        <option value="scam">Online Scam</option>
+                        <option value="hacking">Hacking Attempt</option>
+                        <option value="social-engineering">Social Engineering</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-8">
+                    <label for="description" class="block text-lg font-medium mb-2">Threat Description</label>
+                    <textarea id="description" name="description" rows="5" class="w-full bg-gray-700 text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Please provide as much detail as possible..."></textarea>
+                </div>
+
+                <div class="mb-8">
+                    <label for="evidence" class="block text-lg font-medium mb-2">Evidence (Screenshots, Files)</label>
+                    <div class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center">
+                        <input type="file" id="evidence" name="evidence" class="hidden" multiple>
+                        <label for="evidence" class="cursor-pointer">
+                            <svg class="w-12 h-12 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                            <p class="text-gray-400">Click to upload files or drag and drop</p>
+                            <p class="text-sm text-gray-500 mt-1">PNG, JPG, PDF up to 5MB</p>
+                        </label>
+                    </div>
+                    <div id="file-list" class="mt-3 text-sm text-gray-400"></div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex items-start">
+                        <input type="checkbox" id="anonymous" name="anonymous" class="mt-1 mr-3">
+                        <label for="anonymous" class="text-gray-300">Submit anonymously (no name or email will be recorded)</label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        Submit Report
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-800 py-8 px-6">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="js/report.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
