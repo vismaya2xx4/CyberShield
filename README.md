@@ -1,10 +1,5 @@
 # 🛡️ CyberShield - Security Awareness Platform
 
-![Project Banner](./images/banner.png)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-cyan.svg)](https://opensource.org/licenses/MIT)
-[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-cyan.svg)](https://opensource.org/)
-
 A modern cybersecurity education platform designed to help users identify and protect against digital threats through interactive learning tools.
 
 ## 🌟 Features
@@ -39,9 +34,4 @@ A modern cybersecurity education platform designed to help users identify and pr
 - Smooth animations
 - Cyberpunk-inspired aesthetics
 
-## 🚀 Quick Start
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/cybershield.git
-cd cybershield
