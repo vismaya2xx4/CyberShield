@@ -1,5 +1,7 @@
 # 🛡️ CyberShield - Security Awareness Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🌐%20Visit%20Site-cyan.svg)](https://vismaya2xx4.github.io/CyberShield/)
+
 A modern cybersecurity education platform designed to help users identify and protect against digital threats through interactive learning tools.
 
 ## 🌟 Features
@@ -34,4 +36,5 @@ A modern cybersecurity education platform designed to help users identify and pr
 - Smooth animations
 - Cyberpunk-inspired aesthetics
 
-
+## 🌐 Live Demo  
+Experience the platform live: [https://vismaya2xx4.github.io/CyberShield/](https://vismaya2xx4.github.io/CyberShield/)
